@@ -5,6 +5,7 @@ import ResultType2 from './ResultType2';
 import ResultType3 from './ResultType3';
 import ResultType4 from './ResultType4';
 import Home from './Home';
+import Login from './login';
 import Edong from './Edong';
 import FinalResult from './final'; 
 import Banner from './components/Banner';
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path= "/login" element={<Login />}/>
         <Route path="/option" element={<Banner />} />  
         <Route path="/result1" element={<ResultType1 />} />
         <Route path="/result2" element={<ResultType2 />} />

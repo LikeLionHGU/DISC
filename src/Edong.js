@@ -35,15 +35,8 @@ const Edong = () => { // ✅ 부모에서 전달받는 setUserName
              setUserNameLocal(userName);  
             postData();
 
-        // if (typeof setUserName === "function") { // ✅ setUserName이 함수인지 확인
-        //     setUserName(userName);  
-        //     postData(userName);
-        //     console.log("setUserName 실행됨:", userName);    
-        // } else {
-        //     console.error("setUserName is not a function");
-        // }
     console.log("username: "+userName);
-        navigate("/option", {state: {userName, job: Selected}});
+        navigate("/login", {state: {userName, job: Selected}});
     };   
 
     return (
