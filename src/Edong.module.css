@@ -10,6 +10,7 @@
 
 /* 카드형 컨테이너 */
 .container {
+    font-family: 'Jua', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +31,7 @@ input, select {
     border: 1px solid #ccc;
     background-color: #fff;
     transition: 0.3s;
+    font-family: 'Jua', sans-serif;
 }
 
 /* 입력 필드 호버 효과 */

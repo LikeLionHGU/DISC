@@ -1,10 +1,24 @@
-import React from 'react'
+
+import React, { useState } from 'react'; // useState 가져오기
 import { useLocation } from 'react-router-dom'; // useLocation 임포트
+import { useNavigate } from 'react-router-dom';
 import styles from "./ResultType2.module.css";
 
 const ResultType2=() =>{
     const location = useLocation();
+    const navigate = useNavigate();
+
     const { userName } = location.state || { userName: "익명" }; // 기본값 설정
+
+    const [currentUserName, setUserName] = useState(userName);
+    const [selectedJob, setSelectedJob] = useState(null); // 선택된 작업을 위한 상태
+
+    const navigatePurchase = () => {
+        setUserName(currentUserName);
+        navigate("/final", { state: { userName: currentUserName, job: selectedJob } });
+    }; 
+
+
     return(
         <div>
         <div className={styles.yellowbox}>
@@ -14,6 +28,10 @@ const ResultType2=() =>{
                     그들은 #행동력이 빠른 편이고, #긍정적인 에너지로 열정을 다해 #협력에 임하는 편이죠. <br/>
                     주변에서 #따뜻하며 #신뢰할 수 있는 사람이며, #자기주도적이라는 말을 자주 들을 거에요. 
             </div>
+            <div className={styles.boxl}>
+                <button onClick={navigatePurchase}>모든 결과 보기</button>
+            </div>
+
         </div>
         
         </div>

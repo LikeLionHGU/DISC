@@ -52,10 +52,7 @@ const Option = [
 ];
 
 const Background = styled.div`
-  border: 0;
-  padding: 0; 
-  background-image: url('/Img/background.png');
-  background-size: cover;
+  
 `;
 
 function Banner() {
