@@ -1,6 +1,6 @@
 import Banner from "./components/Banner";
 
-function App() {
+function Appseoyean() {
   return (
     <div>
       <Banner />
@@ -8,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default Appseoyean;
