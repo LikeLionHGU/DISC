@@ -1,24 +1,50 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Edong.module.css";
+import axios from "axios";
 
-const Edong = ({ setUserName }) => { // ✅ 부모에서 전달받는 setUserName
+const Edong = () => { // ✅ 부모에서 전달받는 setUserName
+   
+//    console.log("부모한테 전달받음: "+setUserName);
     const [userName, setUserNameLocal] = useState("");
-    const [values, setValues] = useState({ password: "" });
+    const [pwd, setPwd] = useState("");
     const selectList = ["Planner", "Designer", "Front-end", "Back-end"];
     const [Selected, setSelected] = useState("");
     const navigate = useNavigate();
 
-    const navigatePurchase = () => {
-        if (typeof setUserName === "function") { // ✅ setUserName이 함수인지 확인
-            setUserName(userName);  
-            console.log("setUserName 실행됨:", userName);    
-        } else {
-            console.error("setUserName is not a function");
+
+    async function postData(){
+
+        console.log("name: "+userName);
+        console.log("track: "+Selected);
+        console.log("Password: "+pwd);
+        try{
+            const response = await axios.post('https://one3th-front-api.onrender.com/typeTest/signUp',{
+               name: userName,
+               track: Selected,
+               password:pwd,
+
+            });
+            console.log(response);
+        } catch (error){
+            console.log(error);
         }
+    }
+
+    const navigatePurchase = () => {
+             setUserNameLocal(userName);  
+            postData();
+
+        // if (typeof setUserName === "function") { // ✅ setUserName이 함수인지 확인
+        //     setUserName(userName);  
+        //     postData(userName);
+        //     console.log("setUserName 실행됨:", userName);    
+        // } else {
+        //     console.error("setUserName is not a function");
+        // }
+    console.log("username: "+userName);
         navigate("/option", {state: {userName, job: Selected}});
     };   
-
 
     return (
         
@@ -35,8 +61,8 @@ const Edong = ({ setUserName }) => { // ✅ 부모에서 전달받는 setUserNam
                 <input
                     type="password"
                     name="password"
-                    value={values.password}
-                    onChange={(e) => setValues({ ...values, password: e.target.value })}
+                    value={pwd}
+                    onChange={(e) => setPwd(e.target.value)}
                     placeholder="비밀번호 입력"
                 />
                 <select onChange={(e) => setSelected(e.target.value)} value={Selected}>

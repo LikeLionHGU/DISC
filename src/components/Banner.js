@@ -108,6 +108,7 @@ function Banner() {
     setMaxIndex(maxIdx);
   }
 
+
   // count가 변경될 때마다 checkMax 실행
   useEffect(() => {
     checkMax(count);
@@ -144,6 +145,7 @@ function Banner() {
       }
       return newCount;
     });
+
   };
 
   // 이전 질문으로 돌아가기
@@ -153,6 +155,8 @@ function Banner() {
 
   // 마지막 질문을 다 선택하면 결과 페이지로 이동
   useEffect(() => {
+        console.log("count" + count);
+
     if (index === Option[0].length) {
       switch (maxIndex) {
         case 0:
@@ -178,6 +182,7 @@ function Banner() {
     <div>
       <Background>
         <Question marginTop="70px">자신과 가장 잘 맞는 키워드를 골라주세요!</Question>
+
         {Option.map((opt, i) => (
           <Button
             key={i}
@@ -195,6 +200,7 @@ function Banner() {
         ))}
         {index > 0 && (
           <ArrowButton
+
             onClick={onBackClick}
             marginTop="10px"
             marginLeft="50px"
