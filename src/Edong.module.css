@@ -1,0 +1,37 @@
+.box {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+.cbox {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+}
+
+
+button:hover {
+    background-color: #d32f2f; 
+}
