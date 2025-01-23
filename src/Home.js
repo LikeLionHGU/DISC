@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-      <button onClick={navigateToPurchase}>START</button>
+      <button className={styles.button3} onClick={navigateToPurchase}>START</button>
     </div>
   );
 }

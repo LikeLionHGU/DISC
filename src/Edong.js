@@ -49,7 +49,7 @@ const Edong = ({ setUserName }) => { // ✅ 부모에서 전달받는 setUserNam
                 </select>
                 </div>
                 <div className={styles.cbox}>
-                    <button onClick={navigatePurchase}>확인</button>
+                    <button className={styles.edongbtn} onClick={navigatePurchase}>확인</button>
                 </div>
             </div>
         </div>
