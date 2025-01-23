@@ -77,7 +77,7 @@ function Banner() {
     setMaxIndex(maxIndex);
   }
 
-  const onOptionClick = (option_element, num) => {
+  const onOptionClick = (num) => {
     setLoading(false);
     setIndex(currentIndex => currentIndex + 1);
     setCheck(num);
@@ -92,7 +92,7 @@ function Banner() {
         setCount(current => [current[0] - 10, current[1] - 10, current[2], current[3] - 10]);
         break;
       case 4:
-        setCount(current => [current[0], current[1] - 10, current[2] - 10, current[3]]);
+        setCount(current => [current[0] - 10, current[1] - 10, current[2] - 10, current[3]]);
         break;
       default:
         break;
@@ -124,6 +124,8 @@ function Banner() {
   };
 
   useEffect(() => {
+        console.log("count" + count);
+
     if (index === Option[0].length) {
       switch (maxIndex) {
         case 0:
@@ -153,28 +155,28 @@ function Banner() {
           marginTop="50px"
           marginBottom="30px"
           backColor="rgb(157, 230, 118)"
-          onClick={() => onOptionClick(Option[0], 1)}
+          onClick={() => onOptionClick(1)}
         >
           {Option[0][index]}
         </Button>
         <Button
           marginBottom="30px"
           backColor="rgb(243, 247, 147)"
-          onClick={() => onOptionClick(Option[1], 2)}
+          onClick={() => onOptionClick(2)}
         >
           {Option[1][index]}
         </Button>
         <Button
           marginBottom="30px"
           backColor="rgb(89, 121, 247)"
-          onClick={() => onOptionClick(Option[2], 3)}
+          onClick={() => onOptionClick(3)}
         >
           {Option[2][index]}
         </Button>
         <Button
           marginBottom="30px"
           backColor="rgb(243, 118, 239)"
-          onClick={() => onOptionClick(Option[3], 4)}
+          onClick={() => onOptionClick(4)}
         >
           {Option[3][index]}
         </Button>
