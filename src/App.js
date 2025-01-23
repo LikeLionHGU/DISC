@@ -6,7 +6,7 @@ import ResultType3 from './ResultType3';
 import ResultType4 from './ResultType4';
 import Home from './Home';
 import Edong from './Edong';
-
+import Main from './routes/result'; 
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/result3" element={<ResultType3 />} />
         <Route path="/result4" element={<ResultType4 />} />
         <Route path="/edong" element={<Edong />} />
+        <Route path="/final" element={<Main />} /> 
       </Routes>
     </BrowserRouter>
    
