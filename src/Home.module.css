@@ -28,15 +28,18 @@
 button{
     background-color: orangered;
     color: white;
-    width: 300px;
+    width: 10px;
     height: auto;
     font-size:100px;
     font-family: 'Jua', sans-serif;
     border-radius:40px;
+
 }
 
 .home{
-    padding-top: 550px;
+  
     padding-left:1200px;
     padding-top:550px;
+  
+
 }

@@ -1,11 +1,11 @@
-import dImage from "./d.png"; 
-import iImage from "./i.png"; 
-import sImage from "./s.png"; 
-import cImage from "./c.png"; 
-import dmImage from "./dm.png"; 
-import imImage from "./im.png"; 
-import smImage from "./sm.png"; 
-import cmImage from "./cm.png"; 
+import dImage from "./img/d.png"; 
+import iImage from "./img/i.png"; 
+import sImage from "./img/s.png"; 
+import cImage from "./img/c.png"; 
+import dmImage from "./img/dm.png"; 
+import imImage from "./img/im.png"; 
+import smImage from "./img/sm.png"; 
+import cmImage from "./img/cm.png"; 
 import styles from "./result.module.css";
 import { useState } from "react";
 

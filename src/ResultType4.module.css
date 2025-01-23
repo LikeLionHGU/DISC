@@ -14,9 +14,20 @@
 }
 
 .text{
+    font-family: 'Jua', sans-serif;
     margin-top:400px;
     padding-left:200px;
     padding-right:200px;
     font-size:40px;
     margin-top:190px;
+}
+
+.boxq{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 40;
+    padding-left: 80%;
+    padding-top: 10%;
 }
