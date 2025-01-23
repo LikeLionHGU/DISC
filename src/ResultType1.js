@@ -17,7 +17,7 @@ const ResultType1 = () => {
     
     return (
         <div>
-            <div className={styles.greenbox}>
+            < div className={styles.greenbox}>
           
                 <div className={styles.text}>
                     <div>{currentUserName}님의 결과입니다.</div><br/>
@@ -25,9 +25,9 @@ const ResultType1 = () => {
                     새로운 #도전을 받아 들이기 위해 늘 준비되어 있고, 목표한 #결과치를 #달성하는 것을 우선시하여 #의지가 강하고 #추진력과 #결단력이 있죠. <br/>
                     하지만 주변으로부터 종종 #직설적이다 보니 까다롭다는 말도 들을 수 있어요.
                 </div>
-            <div className={styles.boxx}>
-                <button onClick={navigatePurchase}>모든 결과 보기</button>
-            </div>
+-
+                <button className={styles.button2} onClick={navigatePurchase}>모든 결과 보기</button>
+               
             </div>
         </div>
     );

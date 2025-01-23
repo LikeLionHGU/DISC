@@ -25,21 +25,26 @@
    padding-top:600px;
 }
 
-button{
+.button3{
+    display: flex;
+    position: fixed;
+    top:80vh;
+    left: 80vw;
     background-color: orangered;
     color: white;
-    width: 10px;
-    height: auto;
-    font-size:100px;
+    /* width: 10px;
+    height: auto; */
+    padding: 2vw;
+    font-size:30px;
     font-family: 'Jua', sans-serif;
     border-radius:40px;
+    cursor: pointer;
 
 }
 
 .home{
   
-    padding-left:1200px;
+    padding-left:1000px;
     padding-top:550px;
   
-
 }

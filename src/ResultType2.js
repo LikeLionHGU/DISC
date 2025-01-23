@@ -28,9 +28,7 @@ const ResultType2=() =>{
                     그들은 #행동력이 빠른 편이고, #긍정적인 에너지로 열정을 다해 #협력에 임하는 편이죠. <br/>
                     주변에서 #따뜻하며 #신뢰할 수 있는 사람이며, #자기주도적이라는 말을 자주 들을 거에요. 
             </div>
-            <div className={styles.boxl}>
-                <button onClick={navigatePurchase}>모든 결과 보기</button>
-            </div>
+            <button className={styles.box1} onClick={navigatePurchase}>모든 결과 보기</button>
 
         </div>
         
