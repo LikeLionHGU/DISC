@@ -1,3 +1,0 @@
-function Banner(){
-    return 
-};
