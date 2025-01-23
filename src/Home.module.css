@@ -1,0 +1,42 @@
+.home {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background: url(img/home1.png);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #000000;
+}
+
+.text{
+    margin-top:400px;
+    padding-left:200px;
+    padding-right:200px;
+    font-size:40px;
+    margin-top:190px;
+}
+
+.h11{
+   padding-top:600px;
+}
+
+button{
+    background-color: orangered;
+    color: white;
+    width: 300px;
+    height: auto;
+    font-size:100px;
+    font-family: 'Jua', sans-serif;
+    border-radius:40px;
+}
+
+.home{
+    padding-top: 550px;
+    padding-left:1200px;
+    padding-top:550px;
+}
