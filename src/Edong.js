@@ -11,12 +11,14 @@ const Edong = ({ setUserName }) => { // ✅ 부모에서 전달받는 setUserNam
 
     const navigatePurchase = () => {
         if (typeof setUserName === "function") { // ✅ setUserName이 함수인지 확인
-            setUserName(userName); 
+            setUserName(userName);  
+            console.log("setUserName 실행됨:", userName);    
         } else {
             console.error("setUserName is not a function");
         }
-        navigate("/result1", { state: { userName, job: Selected } });
-    };
+        navigate("/option", {state: {userName, job: Selected}});
+    };   
+
 
     return (
         

@@ -7,13 +7,16 @@ import ResultType4 from './ResultType4';
 import Home from './Home';
 import Edong from './Edong';
 import Main from './routes/result'; 
+import Banner from './components/Banner';
+
 
 function App() {
   return (
   
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} /> 
+        <Route path="/" element={<Home />} />
+        <Route path="/option" element={<Banner />} />  
         <Route path="/result1" element={<ResultType1 />} />
         <Route path="/result2" element={<ResultType2 />} />
         <Route path="/result3" element={<ResultType3 />} />
